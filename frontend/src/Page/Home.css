@@ -1,0 +1,33 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.form__section{
+  border: 0.5px solid #06D6A0;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 20px;
+  background-color: #118AB2;
+}
+
+
+
+.list__grid {
+  border-radius: 20px;
+  width:100%;
+  max-width: 537px;
+  margin: 5px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) ) ;
+  justify-items: center;
+  height: 332px;
+  color: #FFF;
+  padding: 20px;
+}
+

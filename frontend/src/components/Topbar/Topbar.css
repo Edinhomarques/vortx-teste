@@ -1,0 +1,30 @@
+
+.header{
+  background-color: #FFFFFFFF;
+  min-height: 4rem;
+  width: 100%;
+  border-bottom: 1px solid #118AB2;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.header__menu{
+  font-family: 'Roboto', sans-serif;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.header__logo{
+  font-weight: bold;
+  text-decoration: none;
+  color: #118AB2;
+  font-size: 1.5rem;
+}
