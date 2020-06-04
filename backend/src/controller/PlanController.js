@@ -1,13 +1,36 @@
-const tariff = require('../Utils/calculatePlan');
+const tariff = require('../Utils/tariff');
 
 module.exports = {
-  calculatePlan( req, res){
+  calculatePlan( req, res) {
     const { destination, depot, minutes } = req.body
     const destinationOrigin = `${depot}-${destination}`  
+    let plans;
+
+    const value = tariff(destinationOrigin)
+
+    if(value === '-'|| minutes === undefined) {
+      plans = [
+        {
+          type: 'Sem Plano',
+          price: '-'
+        },
+        { 
+          type: 'FaleMais 30',
+          price: '-', 
+        },
+        {
+          type: 'FaleMais 60',
+          price: '-', 
+        },
+        {
+          type: 'FaleMais 120',
+          price: '-'
+        }
+      ]
+      return res.status(200).send(plans)
+    }
     
-    let value = tariff(destinationOrigin)
-    
-    const plans = [
+     plans = [
       {
         type: 'Sem Plano',
         price: value * minutes 
@@ -25,6 +48,7 @@ module.exports = {
         price: minutes > 120 ? (value + (value * 0.1)) * (minutes - 120) : 0
       }
     ]
-    return res.send(plans)
+    
+    return res.status(200).send(plans)
   }
 }

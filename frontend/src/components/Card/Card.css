@@ -8,7 +8,8 @@
   border: 1px solid #FFFF;
   text-align: center;
 }
-.card:hover{
+
+.card:hover {
   border:1px solid #2125292d;
   background-color: #FFFF;
   color: #118AB2;
@@ -16,16 +17,11 @@
 
 
 
-.card__name{
+.card__name {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
 
-.card__price{
+.card__price {
   padding: 1px 5px;
-}
-
-.card__price--discount{
-  color: #a7a7a7;
-  text-decoration: line-through;
 }

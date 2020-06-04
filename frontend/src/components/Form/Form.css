@@ -1,3 +1,11 @@
+.title,
+.form__title {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -5,12 +13,6 @@
 }
 .form__group {
   margin-top: 25px;
-}
-.form__title{
-  color: #FFFFFF;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
 }
 
 .form__input {
@@ -20,9 +22,9 @@
   width: 100%;
   margin: 5px;
   border: 0;
-  border-bottom: 1px solid #073B4C;
+  border-bottom: 1px solid #FFFF;
   color: #FFFF;
-  transition: .2s ease-in-out;
+  
   box-sizing: border-box;
   
 }
@@ -37,7 +39,7 @@
   opacity: 0.5;
 }
 
-.form__button{
+.form__button {
   background-color: #FFFF;
   color: #118AB2;
   font-weight: bolder;

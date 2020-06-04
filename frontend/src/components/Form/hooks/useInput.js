@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
 
-export function useInput(valueInitial){
+export function useInput(valueInitial) {
   const [value, setValue] = useState(valueInitial)
 
-  function handleChange(event){
-    console.log(event.target.value)
+  function handleChange(event) {
     setValue(event.target.value)
   }
 

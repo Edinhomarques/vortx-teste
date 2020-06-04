@@ -1,7 +1,7 @@
-function tariff(call){
+function tariff(call) {
   switch(call){
     case '011-016':
-      return 1.9
+      return 1.90
       
     case '016-011':
       return 2.90

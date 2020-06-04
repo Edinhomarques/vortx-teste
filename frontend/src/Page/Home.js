@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import Form from '../components/Form/Form';
 import { useInput } from '../components/Form/hooks/useInput';
@@ -12,13 +12,12 @@ const Home = () => {
   const [loading, setLoading ] = useState(false)
   const [plans, setPlans] = useState([])
 
-  async function handleApi(event){
+  async function handleApi(event) {
     try {  
       event.preventDefault()
       const response = await axios.post('http://localhost:3001/calculatePlan',{depot, destination, minutes})
       const data = response.data
       setLoading(true)
-      console.log(data.withoutPlan)
       setPlans([...data])
     } catch (error) {
       console.log(error)

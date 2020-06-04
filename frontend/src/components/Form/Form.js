@@ -8,10 +8,10 @@ export default function Form({
   handleDestination, 
   handleMinutes,
   handleApi
-  }){
+  }) {
   return (
     <>
-      <h1 className='form__title'>Consultar Valores dos Planos</h1>
+      <h1 className='title'>Consultar Valores dos Planos</h1>
       <form className="form" onSubmit={handleApi}>
         <div className="form__group">
           <label className="form__title" htmlFor="depot">DDD de Origem </label><br/>
